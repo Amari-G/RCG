@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  padding: 0;
+  width: 100%;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: white;
+  border: white;
+}
+
+.container-fluid .navbar-header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.progres-bar {
+  padding: 10px;
+}
+
+button {
+  margin: 20px;
+  width: 75px;
+  height: 75px;
+}
+
+button:hover,
+.glyphicon:hover {
+  cursor: pointer;
+}
+
+.glyphicon-chevron-left:hover,
+.glyphicon-chevron-right:hover {
+  cursor: pointer;
+  color: lightgrey;
+}
+
+button:last-child {
+  background-color: grey;
+  color: white;
+}
+
+.glyphicon {
+  font-size: 32px;
+}
+
+.glyphicon-chevron-left {
+  top: 250px;
+  left: 0;
+  position: absolute;
+  font-size: 50px;
+}
+
+.glyphicon-chevron-right {
+  top: 250px;
+  right: 0;
+  position: absolute;
+  font-size: 50px;
+}
+
+.image-container {
+  height: 300px;
+}
+
+img {
+  max-height: 100%;
+  max-width: 80%;
+  margin: 0 10%;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer > p {
+  position: relative;
+  margin: 0 25%;
+  text-align: center;
+}

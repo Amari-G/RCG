@@ -1,0 +1,71 @@
+<div class="container">
+  <div>
+    <nav class="navbar navbar-static-top navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar"
+                 aria-valuenow="{{points}}" aria-valuemin="0" aria-valuemax="100"
+                 style="width: {{points}}%">
+              <span class="pull-right">{{points}}% Complete</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="active-game" ng-hide="points == 100">
+    <div class="row" ng-hide="wrongAnswer">
+      <div class="image-container text-center"
+           ng-repeat-start="item in rcgItems"
+           ng-show="$index == currentItemIndex">
+        <span class="glyphicon glyphicon-chevron-left"
+              ng-click="previousQuestion()"
+              ng-hide="$first">
+        </span>
+        <img ng-src="{{item.imageUrl}}"/>
+        <span class="glyphicon glyphicon-chevron-right text-right"
+              ng-click="nextQuestion()"
+              ng-hide="$last">
+        </span>
+      </div>
+
+      <h3 class="text-center" ng-show="$index == currentItemIndex"
+          ng-repeat-end>
+        {{item.title}}
+      </h3>
+    </div>
+
+    <div class="buttons row text-center" style="margin-top: 25px;">
+      <button ng-click="pick('R', currentItem)"
+              class="btn btn-lg btn-primary">
+        <span>R</span>
+      </button>
+      <button ng-click="pick('C', currentItem)"
+              class="btn btn-lg btn-success">
+        <span>C</span>
+      </button>
+      <button ng-click="pick('G', currentItem)"
+              class="btn btn-lg btn-default">
+        <span>G</span>
+      </button>
+    </div>
+
+    <div ng-show="wrongAnswer" class="text-center">
+      <img ng-src="http://i.imgur.com/y5nGqEe.png"/>
+      <span style="font-size: 24px; color: red;">Wrong!</span>
+    </div>
+  </div>
+
+  <div class="jumbotron" ng-show="points == 100">
+    <h1 class="text-center">Congratulations!</h1>
+    <p></p>
+  </div>
+
+  <div class="footer">
+    <hr>
+    <p>With <span style="color: red;">♥</span> from <a href="http://hackthecd.org/">Hack the CD</a></p>
+  </div>
+
+</div>
