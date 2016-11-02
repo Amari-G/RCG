@@ -96,3 +96,17 @@ img {
   margin: 0 25%;
   text-align: center;
 }
+
+@media (max-width: 320px) { 
+	.row {
+		margin: 0;
+	}
+
+	button {
+		margin: 0;
+	}
+	
+	.buttons {
+		bottom: 50px;
+	}
+}
