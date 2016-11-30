@@ -10,3 +10,7 @@ From the terminal, run "npm install"
 then "bower install"
 
 Run "gulp serve"
+
+## Deploy
+
+`gulp deploy --production`
