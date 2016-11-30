@@ -1,34 +1,24 @@
-<div class="container">
-  <div>
-    <nav class="navbar navbar-static-top navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <div class="progress">
-            <div class="progress-bar" role="progressbar"
-                 aria-valuenow="{{points}}" aria-valuemin="0" aria-valuemax="100"
-                 style="width: {{points}}%">
-              <span class="pull-right">{{points}}% Complete</span>
-            </div>
+<div class="main-wrapper container">
+  <nav class="navbar navbar-static-top navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar"
+               aria-valuenow="{{points}}" aria-valuemin="0" aria-valuemax="100"
+               style="width: {{points}}%">
+            <span class="pull-right">{{points}}% Complete</span>
           </div>
         </div>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 
   <div class="active-game" ng-hide="points == 100">
     <div class="row" ng-hide="wrongAnswer">
       <div class="image-container text-center"
            ng-repeat-start="item in rcgItems"
            ng-show="$index == currentItemIndex">
-<!--         <span class="glyphicon glyphicon-chevron-left"
-              ng-click="previousQuestion()"
-              ng-hide="$first">
-        </span> -->
         <img ng-src="{{item.imageUrl}}"/>
-<!--         <span class="glyphicon glyphicon-chevron-right text-right"
-              ng-click="nextQuestion()"
-              ng-hide="$last">
-        </span> -->
       </div>
 
       <h3 class="text-center" ng-show="$index == currentItemIndex"
@@ -37,7 +27,7 @@
       </h3>
     </div>
 
-    <div class="buttons row text-center" style="margin-top: 25px;">
+    <div ng-hide="wrongAnswer" class="buttons row text-center" style="margin-top: 25px;">
       <button ng-click="pick('R', currentItem)"
               class="btn btn-lg btn-primary btn-circle">
         <span style="font-size: 2em;">&#x267B;</span>
@@ -64,7 +54,6 @@
   </div>
 
   <div class="footer">
-    <hr>
     <p>With <span style="color: red;">♥</span> from <a href="http://hackthecd.org/">Hack the CD</a></p>
   </div>
 

@@ -69,20 +69,33 @@ button:last-child {
   font-size: 50px;
 }
 
-.image-container {
-  height: 300px;
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-img {
-  max-height: 100%;
+.image-container {
+  height: 200px;
+}
+
+.image-container img {
+  max-height: 200px;
   max-width: 80%;
-  margin: 0 10%;
+  margin: 0 auto;
+}
+
+.active-game, .jumbotron {
+  flex: 1;
+}
+
+.btn:focus, .btn:active, .btn:active:focus {
+  outline: none;
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  padding: 1em 0;
+  border-top: 1px solid gray;
 }
 
 .footer > p {
