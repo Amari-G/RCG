@@ -1,6 +1,9 @@
 {
   "name": "rcg",
   "version": "0.0.0",
+  "scripts": {
+    "start": "gulp serve"
+  },
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "~1.7.1",
