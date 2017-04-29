@@ -1,10 +1,6 @@
 'use strict';
 
 var gulp   = require('gulp');
-var gutil  = require('gulp-util');
-var argv   = require('minimist')(process.argv);
-var gulpif = require('gulp-if');
-var prompt = require('gulp-prompt');
 var rsync  = require('gulp-rsync');
 
 gulp.paths = {
@@ -42,10 +38,3 @@ gulp.task('deploy', function () {
   return gulp.src(rsyncPaths)
     .pipe(rsync(rsyncConf));
 });
-
-function throwError(taskName, msg) {
-  throw new gutil.PluginError({
-      plugin: taskName,
-      message: msg
-    });
-}
