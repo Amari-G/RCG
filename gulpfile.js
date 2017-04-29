@@ -31,7 +31,7 @@ gulp.task('deploy', function () {
   };
 
   rsyncConf.hostname = 'wastebuddy.us'; // hostname
-  rsyncConf.username = 'wbdeploy'; // ssh username
+  rsyncConf.username = 'david'; // ssh username
   rsyncConf.destination = '/home/david/webapps/wastebuddy'; // path where uploaded files go
 
   // Use gulp-rsync to sync the files
