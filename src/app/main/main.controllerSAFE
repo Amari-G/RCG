@@ -80,12 +80,12 @@ angular.module('rcg')
       },
       {
         'title': 'Egg carton',
-        'imageUrl': 'https://img.clipartfox.com/f52def27840220eafc18ac0bede81b86_cnd-shellac-satin-pajamas-empty-egg-carton-clipart_1280-804.jpeg',
+        'imageUrl': 'http://www.ckfinc.com/Portals/0/food-packaging/pulp-egg-cartons/06524.jpg',
         'type': 'C'
       },
 	  {
         'title': 'Uncoated Paper Plates',
-        'imageUrl': 'https://i5.walmartimages.com/asr/ff798b27-da26-4364-9467-aeafc4ead821_1.e56eae4a31c0d75cbc201524ef34e26d.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF',
+        'imageUrl': 'http://www.popuppoems.com/wp-content/gallery/street-treats-found-stuff/food-paper-plate-street-3.jpg',
         'type': 'C'
       },
       {
@@ -99,163 +99,18 @@ angular.module('rcg')
         'type': 'R'
       },
 	  {
-        'title': 'Meat',
-        'imageUrl': 'assets/images/Meat.jpg',
-        'type': 'C'
-      },
-	  {
         'title': 'Bones',
-        'imageUrl': 'assets/images/Bones.png',
+        'imageUrl': 'http://purposefullfood.com/wp-content/uploads/2014/12/chicken-bones.jpg',
         'type': 'C'
-      },
-	  {
-        'title': 'Animal Waste',
-        'imageUrl': 'assets/images/Animal-waste.jpg',
-        'type': 'C'
-      },
-	  {
-        'title': 'Milk Carton',
-        'imageUrl': 'assets/images/Milk-Carton.jpg',
-        'type': 'R'
-      },
-	  {
-        'title': 'Alkaline Batteries',
-        'imageUrl': 'assets/images/Batteries.jpg',
-        'type': 'G'
-      },
-	  {
-        'title': 'Carpet',
-        'imageUrl': 'assets/images/Carpet.jpg',
-        'type': 'C'
-      },
-	  {
-        'title': 'Christmas Tree',
-        'imageUrl': 'assets/images/Christmas-Tree.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Electronics',
-        'imageUrl': 'assets/images/Electronics.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Flourescent Lights',
-        'imageUrl': 'assets/images/Flourescent-Lights.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Furniture',
-        'imageUrl': 'assets/images/Furniture.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Lawn Mower',
-        'imageUrl': 'assets/images/Lawn-Mower.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Medicines',
-        'imageUrl': 'assets/images/Medicines.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Pots and Pans',
-        'imageUrl': 'assets/images/Pots-and-Pans.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Microwave Ovens',
-        'imageUrl': 'assets/images/Microwave-Ovens.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Motor Oil',
-        'imageUrl': 'assets/images/Motor-Oil.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Paint',
-        'imageUrl': 'assets/images/Paint.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Pizza Box',
-        'imageUrl': 'assets/images/Pizza-box.jpg',
-        'type': 'C',
-      },
-	  {
-        'title': 'Pesticides',
-        'imageUrl': 'assets/images/Pesticides.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Printer Cartridges',
-        'imageUrl': 'assets/images/Printer-cartridges.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Propane Tanks',
-        'imageUrl': 'assets/images/Propane-Tanks.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Needles',
-        'imageUrl': 'assets/images/Needles.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'TVs',
-        'imageUrl': 'assets/images/Tvs.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Textiles',
-        'imageUrl': 'assets/images/Textiles.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Tires',
-        'imageUrl': 'assets/images/Tires.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Vehicles',
-        'imageUrl': 'assets/images/Vehicles.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Wood',
-        'imageUrl': 'assets/images/Wood.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Incandescent Light Bulbs',
-        'imageUrl': 'assets/images/Light-Bulbs.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'CDs and DVDs',
-        'imageUrl': 'assets/images/CDs-and-DVDs.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Ceramics',
-        'imageUrl': 'assets/images/Ceramics.jpg',
-        'type': 'S'
-      },
-	  {
-        'title': 'Broken Glass',
-        'imageUrl': 'assets/images/Broken-Glass.jpg',
-        'type': 'S'
-      },
+	  }
     ];
 
     $scope.points = 0;
-    $scope.currentItemIndex = Math.floor(Math.random() * ($scope.rcgItems.length - 1));
+    $scope.currentItemIndex = 0;
 
     // move to the next question
     $scope.nextQuestion = function() {
-      $scope.currentItemIndex = Math.floor(Math.random() * ($scope.rcgItems.length - 1));
+      $scope.currentItemIndex += 1;
       updateCurrentItem();
     };
 
@@ -283,7 +138,7 @@ angular.module('rcg')
         var answeredEverythingCorrectly = $scope.points + 20 > $scope.rcgItems.length * 20;
         if (answeredEverythingCorrectly) return;
 
-        $scope.points += 50;
+        $scope.points += 5;
         $scope.answered[$scope.currentItemIndex] = true;
         $scope.nextQuestion();
       }
@@ -294,11 +149,6 @@ angular.module('rcg')
         }, 1000);
       }
     };
-	
-	$scope.restart = function (){
-		$scope.points = 0;
-		console.log("Restarting Quiz");
-	}
 
     function updateCurrentItem() {
       $scope.currentItem = $scope.rcgItems[$scope.currentItemIndex];

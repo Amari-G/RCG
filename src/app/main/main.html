@@ -36,6 +36,10 @@
               class="btn btn-lg btn-success btn-circle">
         <span><img style="max-height: 2em;" src="/assets/images/apple-core.png" /></span>
       </button>
+	  <button ng-click="pick('S', currentItem)"
+              class="btn btn-lg btn-circle btn-special">
+        <span><img style="max-height: 2em;" src="/assets/images/Special-Button.jpg" /></span>
+      </button>
       <button ng-click="pick('G', currentItem)"
               class="btn btn-lg btn-default btn-circle">
         <span><img style="max-height: 2em;" src="/assets/images/trash.png" /></span>
@@ -50,11 +54,8 @@
 
   <div class="jumbotron" ng-show="points == 100">
     <h1 class="text-center">Congratulations!</h1>
-    <p></p>
+		<div class="buttons row text-center">
+			<button ng-click="restart()" class="text-center">RESTART</button>
+		</div>
   </div>
-
-  <div class="footer">
-    <p>With <span style="color: red;">♥</span> from <a href="http://hackthecd.org/">Hack the CD</a></p>
-  </div>
-
 </div>
