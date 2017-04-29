@@ -5,9 +5,10 @@
     "clean": "node_modules/.bin/gulp clean",
     "build": "node_modules/.bin/gulp build",
     "start": "node_modules/.bin/gulp serve",
-    "postinstall": "bower install"
+    "postinstall": "node_modules/bin/bower install"
   },
   "dependencies": {
+    "bower": "^1.8.0",
     "browser-sync": "~1.7.1",
     "chalk": "~0.5.1",
     "del": "~0.1.3",
