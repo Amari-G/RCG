@@ -2,7 +2,9 @@
   "name": "rcg",
   "version": "0.0.0",
   "scripts": {
-    "start": "gulp serve"
+    "clean": "node_modules/.bin/gulp clean",
+    "build": "node_modules/.bin/gulp build",
+    "start": "node_modules/.bin/gulp serve"
   },
   "dependencies": {
     "browser-sync": "~1.7.1",
