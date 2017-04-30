@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "clean": "node_modules/.bin/gulp clean",
-    "build": "node_modules/.bin/bower install && node_modules/.bin/gulp build",
-    "start": "node_modules/.bin/bower install && node_modules/.bin/gulp build && node_modules/.bin/gulp serve",
-    "postinstall": "node_modules/.bin/bower install"
+    "build": "node_modules/.bin/bower install --production && node_modules/.bin/gulp build",
+    "start": "node_modules/.bin/gulp serveprod",
+    "postinstall": "node_modules/.bin/bower install --production"
   },
   "dependencies": {
     "bower": "1.8.0",
