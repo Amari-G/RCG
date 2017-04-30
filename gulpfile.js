@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp   = require('gulp');
+var connect = require('gulp-connect');
 var rsync  = require('gulp-rsync');
 
 gulp.paths = {
@@ -18,7 +19,7 @@ gulp.task('default', ['clean'], function () {
 
 gulp.task('serveprod', function() {
   connect.server({
-    root: '.',
+    root: 'dist',
     port: process.env.PORT || 5000, // localhost:5000
     livereload: false
   });
